@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80">
+  <defs>
+    <linearGradient id="njpw-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#E8293A"/>
+      <stop offset="100%" style="stop-color:#9B1B2A"/>
+    </linearGradient>
+  </defs>
+  <circle cx="40" cy="40" r="38" fill="url(#njpw-grad)" stroke="#FF4D5E" stroke-width="2"/>
+  <path d="M22 52V28h4l14 16V28h4v24h-4L26 36v16h-4z" fill="white" font-weight="bold"/>
+  <path d="M48 52V28h4v10h2l6-10h5l-7.5 11L65 52h-5l-6-11h-2v11h-4z" fill="white" opacity="0.5" transform="scale(0.6) translate(28, 20)"/>
+</svg>

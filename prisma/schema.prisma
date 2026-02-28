@@ -1,0 +1,56 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model Promotion {
+  id        String   @id @default(cuid())
+  name      String
+  shortName String
+  slug      String   @unique
+  color     String?
+  website   String?
+  events    Event[]
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Venue {
+  id         String   @id @default(cuid())
+  name       String
+  address    String?
+  prefecture String
+  region     String
+  latitude   Float
+  longitude  Float
+  capacity   Int?
+  events     Event[]
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+}
+
+model Event {
+  id          String   @id @default(cuid())
+  name        String
+  description String?
+  date        DateTime
+  startTime   String?
+  doorTime    String?
+  promotionId String
+  promotion   Promotion @relation(fields: [promotionId], references: [id])
+  venueId     String
+  venue       Venue     @relation(fields: [venueId], references: [id])
+  ticketUrl   String?
+  ticketInfo  String?
+  status      String   @default("scheduled")
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@index([date])
+  @@index([promotionId])
+  @@index([venueId])
+}

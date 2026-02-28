@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80">
+  <defs>
+    <linearGradient id="dg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#EF4444"/>
+      <stop offset="100%" style="stop-color:#DC2626"/>
+    </linearGradient>
+  </defs>
+  <path d="M40 2 L70 18 L70 58 L40 78 L10 58 L10 18 Z" fill="url(#dg-grad)" stroke="#FF6666" stroke-width="1.5"/>
+  <text x="40" y="38" text-anchor="middle" fill="white" font-size="13" font-weight="bold" font-family="sans-serif" letter-spacing="1">DRAGON</text>
+  <text x="40" y="54" text-anchor="middle" fill="white" font-size="15" font-weight="bold" font-family="sans-serif" letter-spacing="2">GATE</text>
+</svg>

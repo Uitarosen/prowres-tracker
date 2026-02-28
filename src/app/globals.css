@@ -1,0 +1,65 @@
+@import "tailwindcss";
+
+@theme inline {
+  --font-sans: var(--font-noto-sans-jp);
+  --color-gray-750: #2d3748;
+  --color-gray-850: #1a202c;
+}
+
+body {
+  background-color: #030712;
+  color: #f3f4f6;
+}
+
+/* Leaflet popup overrides for dark theme */
+.leaflet-popup-content-wrapper {
+  background: #1f2937 !important;
+  color: #f3f4f6 !important;
+  border-radius: 0.5rem !important;
+  border: 1px solid #374151 !important;
+}
+
+.leaflet-popup-tip {
+  background: #1f2937 !important;
+}
+
+.leaflet-popup-content a {
+  color: #f97316 !important;
+}
+
+.leaflet-popup-content a:hover {
+  color: #fb923c !important;
+}
+
+/* Hide scrollbar for horizontal filter scroll */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Custom marker styling */
+.custom-marker {
+  background: none !important;
+  border: none !important;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #111827;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #374151;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #4b5563;
+}

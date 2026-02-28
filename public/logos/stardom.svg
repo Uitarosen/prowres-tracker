@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80">
+  <defs>
+    <linearGradient id="star-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FF3CAC"/>
+      <stop offset="100%" style="stop-color:#E91E8C"/>
+    </linearGradient>
+  </defs>
+  <circle cx="40" cy="40" r="38" fill="url(#star-grad)" stroke="#FF69B4" stroke-width="2"/>
+  <polygon points="40,10 47,30 68,30 51,42 57,62 40,50 23,62 29,42 12,30 33,30" fill="white" opacity="0.3"/>
+  <text x="40" y="48" text-anchor="middle" fill="white" font-size="11" font-weight="bold" font-family="sans-serif" letter-spacing="1">STAR</text>
+  <text x="40" y="60" text-anchor="middle" fill="white" font-size="9" font-family="sans-serif" letter-spacing="2" opacity="0.8">DOM</text>
+</svg>
