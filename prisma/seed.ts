@@ -1,6 +1,18 @@
 import { PrismaClient } from "@prisma/client";
+import { PrismaLibSQL } from "@prisma/adapter-libsql";
 
-const prisma = new PrismaClient();
+function createSeedClient(): PrismaClient {
+  if (process.env.TURSO_DATABASE_URL) {
+    const adapter = new PrismaLibSQL({
+      url: process.env.TURSO_DATABASE_URL,
+      authToken: process.env.TURSO_AUTH_TOKEN,
+    });
+    return new PrismaClient({ adapter } as never);
+  }
+  return new PrismaClient();
+}
+
+const prisma = createSeedClient();
 
 async function main() {
   // Clean existing data
