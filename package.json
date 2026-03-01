@@ -13,6 +13,7 @@
     "@libsql/client": "^0.8.1",
     "@prisma/adapter-libsql": "^6.19.2",
     "@prisma/client": "^6.19.2",
+    "cheerio": "^1.2.0",
     "date-fns": "^4.1.0",
     "dotenv": "^17.3.1",
     "ics": "^3.8.1",

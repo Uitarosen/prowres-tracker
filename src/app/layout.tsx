@@ -9,8 +9,25 @@ const notoSansJP = Noto_Sans_JP({
 });
 
 export const metadata: Metadata = {
-  title: "ジャパン プロレスマニア",
-  description: "日本国内のプロレス興行情報を一覧・検索できるサービス",
+  metadataBase: new URL("https://prowres-tracker.vercel.app"),
+  title: {
+    default: "ジャパン プロレスマニア",
+    template: "%s | ジャパン プロレスマニア",
+  },
+  description:
+    "日本国内のプロレス興行情報を一覧・検索できるサービス。新日本プロレス、全日本プロレス、NOAH、DDT、スターダム、ドラゴンゲートなど主要団体の興行スケジュールをリスト・カレンダー・マップで確認できます。",
+  openGraph: {
+    siteName: "ジャパン プロレスマニア",
+    locale: "ja_JP",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default function RootLayout({

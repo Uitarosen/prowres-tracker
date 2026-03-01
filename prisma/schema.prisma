@@ -47,9 +47,11 @@ model Event {
   ticketUrl   String?
   ticketInfo  String?
   status      String   @default("scheduled")
+  sourceId    String?
   createdAt   DateTime @default(now())
   updatedAt   DateTime @updatedAt
 
+  @@unique([date, promotionId, venueId])
   @@index([date])
   @@index([promotionId])
   @@index([venueId])
