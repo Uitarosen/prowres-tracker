@@ -8,6 +8,7 @@ import {
 } from "@/lib/scraper";
 
 export const dynamic = "force-dynamic";
+export const maxDuration = 60; // Vercel Hobby plan max
 
 export async function GET(request: NextRequest) {
   // Vercel Cron認証チェック
